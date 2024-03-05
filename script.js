@@ -50,6 +50,9 @@ document.addEventListener('DOMContentLoaded', function () {
         button.addEventListener('click', function () {
             const pdfPath = this.getAttribute('data-pdf');
             window.open(pdfPath, '_blank');
+            var link = document.createElement('a');
+            link.href = pdfpath;//your button just opening but not downloding it
+            link.download = 'downloaded_pdf.pdf';//may be it is not correct but that option will be better
         });
     });
 
